@@ -25,14 +25,14 @@ class CheckInsController extends Controller
 			$checkIn->customer_name = filter_var($request['customerName'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 
 			$checkIn->save();
-			//$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
+			$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
 
 			$line = CheckIns::where('barbershop_name', $checkIn->barbershop_name)->count();
 
-		//	$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
+			$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
 			$msg ='there are ' . $line . ' people in line';
 
-		//	session()->flash('success', $msg);
+			session()->flash('success', $msg);
 
 			return redirect('/');
 		}
