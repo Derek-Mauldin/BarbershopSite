@@ -18,6 +18,8 @@ class CheckInsController extends Controller
 					'customerName' => 'required|min:5'
 
 			]);
+/*
+			dd($request);
 
 			$checkIn = new CheckIns;
 
@@ -28,11 +30,13 @@ class CheckInsController extends Controller
 			$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
 
 			$line = CheckIns::where('barbershop_name', $checkIn->barbershop_name)->count();
+			dd($line);
 
 			$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
 			$msg ='there are ' . $line . ' people in line';
 
 			session()->flash('success', $msg);
+*/
 
 			return redirect('/');
 		}
