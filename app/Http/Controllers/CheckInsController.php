@@ -12,31 +12,25 @@ class CheckInsController extends Controller
 		 */
     public function store(Request $request)
 		{
-
 			$this->validate($request, [
-				  'shopName' => 'required',
-					'customerName' => 'required|min:5'
+				 'shopName' => 'required',
+				 'customerName' => 'required|min:5'
 
 			]);
-/*
-			dd($request);
 
 			$checkIn = new CheckIns;
 
 			$checkIn->barbershop_name = filter_var($request['shopName'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 			$checkIn->customer_name = filter_var($request['customerName'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 
+			$lineCount = CheckIns::where('barbershop_name', $checkIn->barbershop_name)->count();
+
 			$checkIn->save();
-			$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
-
-			$line = CheckIns::where('barbershop_name', $checkIn->barbershop_name)->count();
-			dd($line);
 
 			$msg = 'Hello ' . $checkIn->customer_name . ', You have  successfully checked in at ' . $checkIn->barbershop_name;
-			$msg ='there are ' . $line . ' people in line';
+			$msg .= '. There are ' . $lineCount . ' people ahead of you';
 
 			session()->flash('success', $msg);
-*/
 
 			return redirect('/');
 		}

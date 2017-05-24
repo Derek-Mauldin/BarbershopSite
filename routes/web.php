@@ -19,7 +19,7 @@ Route::post('/remove', 'CheckInsController@delete')->middleware('auth');
 
 Route::get('/', 'BarberShopsController@getAll');
 
-Route::post('/checkIn', 'WelcomeController@store');
+Route::post('/checkIn', 'CheckInsController@store');
 
 Route::get('/login', 'HomeController@index');
 
