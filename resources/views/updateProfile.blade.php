@@ -22,8 +22,13 @@
 
 
             <div class="form-group">
-                <label for="barbershop_name">Barbershop Name</label>
-                <input type="text" class="form-control" id="barbershop_name" name="barbershop_name" value="{{ Auth::user()->barbershop_name }}" style="width: 40%" required>
+                <label for="barbershop_name">Barbershop</label>
+                <select class="form-control" id="barbershop_name" name="barbershop_name" style="width: 40%">
+                    <option value="">Choose the shop you work at</option>
+                    @foreach($barberShops as $shop)
+                        <option value="{{ $shop->barbershop_name }}">{{ $shop->barbershop_name }}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-group">

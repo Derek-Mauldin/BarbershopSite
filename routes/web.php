@@ -13,15 +13,13 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::get('/queue', 'CheckInsController@show')->middleware('auth');
+Route::get('/', 'CheckInsController@loadWelcome');
+
+Route::get('/queue', 'CheckInsController@getQueueForBarbershop')->middleware('auth');
 
 Route::post('/remove', 'CheckInsController@delete')->middleware('auth');
 
-Route::get('/', 'BarberShopsController@getAll');
-
-Route::post('/checkIn', 'CheckInsController@store');
-
-Route::get('/login', 'HomeController@index');
+Route::post('/checkIn', 'CheckInsController@checkIn');
 
 Route::post('/addShop', 'BarberShopsController@store');
 

@@ -12,7 +12,7 @@
         <hr>
 
         <div>
-            <h3><a href="/queue">Review and upadate your shops queue</a></h3>
+            <h3><a href="/queue">Review and upadate your shop's queue</a></h3>
         </div>
 
         <div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Http\Controllers\BarberShopsController;
 
 class UserController extends Controller
 {
@@ -22,7 +23,9 @@ class UserController extends Controller
 
     public function update()
 		{
-			return view('updateProfile');
+			$barberShops = BarberShopsController::getAllBarbershops();
+
+			return view('updateProfile', compact('barberShops'));
 		}
 
 	public function doUpdate (Request $request)
