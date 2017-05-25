@@ -23,8 +23,13 @@
 
 
             <div class="form-group">
-                <label for="barbershop_name">Barbershop Name</label>
-                <input type="text" class="form-control" id="barbershop_name" name="barbershop_name" style="width: 40%" required>
+                <label for="shopName">Barbershop you work for</label>
+                <select class="form-control" id="shopName" name="shopName" style="width: 40%">
+                    <option value="">Choose your barbershop</option>
+                    @foreach($barberShops as $shop)
+                        <option value="{{ $shop->barbershop_name }}">{{ $shop->barbershop_name }}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-group">

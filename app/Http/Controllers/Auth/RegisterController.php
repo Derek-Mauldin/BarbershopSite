@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Controllers\BarberShopsController;
 
 class RegisterController extends Controller
 {
@@ -76,7 +77,12 @@ class RegisterController extends Controller
 				 'password' => bcrypt($data['password']),
 				 'barbershop_name' => $data['barbershop_name']
 			]);
-
     }
+
+	public function showRegistrationForm()
+	{
+		$barberShops = BarberShopsController::getAllBarbershops();
+		return view('auth.register', compact('barberShops'));
+	}
 
 }
