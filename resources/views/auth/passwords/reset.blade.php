@@ -11,6 +11,8 @@
 
         <h2>Please Log In Here:</h2>
 
+        @include('error')
+
         <form method="POST" action="/passworepUdate">
 
             {{ csrf_field() }}
@@ -33,8 +35,6 @@
             <button type="submit" class="btn btn-danger">Change Password</button>
 
         </form>
-
-        @include('error')
 
     </div>
 

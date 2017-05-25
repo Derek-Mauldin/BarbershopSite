@@ -11,6 +11,9 @@
 
         <h2>Add new Barbershop:</h2>
 
+        @include('error')
+
+
         <form method="POST" action="/addShop">
 
             {{ csrf_field() }}
@@ -25,10 +28,8 @@
 
         </form>
 
-        @include('error')
-        @include('logout')
-
     </div>
 
+    @include('logout')
 
 @endsection

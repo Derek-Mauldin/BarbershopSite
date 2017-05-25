@@ -36,9 +36,8 @@
 
     </table>
 
+    @include('logout')
 
 </div>
-
-@include('logout')
 
 @endsection

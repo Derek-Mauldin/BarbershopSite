@@ -9,9 +9,12 @@
 
         <h2>Register A New Administrator Here:</h2>
 
+        @include('error')
+
         <form method="POST" action="/register">
 
             {{ csrf_field() }}
+
 
             <div class="form-group">
                 <label for="name">Name</label>
@@ -43,7 +46,6 @@
 
         </form>
 
-        @include('error')
         @include('./logout')
 
     </div>
