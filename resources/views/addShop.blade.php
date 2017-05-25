@@ -1,4 +1,4 @@
-@extends('./admin')
+@extends('adminMaster')
 
 
 @include('nav')

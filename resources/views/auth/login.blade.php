@@ -1,4 +1,4 @@
-@extends('admin')
+@extends('adminMaster')
 
 <div class="container">
     <nav class="navbar navbar-light text-right">

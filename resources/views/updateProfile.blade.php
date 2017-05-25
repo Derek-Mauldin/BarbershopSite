@@ -1,4 +1,4 @@
-@extends('./admin')
+@extends('adminMaster')
 
 @section('content')
 
@@ -24,7 +24,7 @@
             <div class="form-group">
                 <label for="barbershop_name">Barbershop</label>
                 <select class="form-control" id="barbershop_name" name="barbershop_name" style="width: 40%">
-                    <option value="">Choose the shop you work at</option>
+                    <option value="">Choose the shop you work for</option>
                     @foreach($barberShops as $shop)
                         @if($shop->barbershop_name === Auth::user()->barbershop_name)
                             <option value="{{ $shop->barbershop_name }}" selected>{{ $shop->barbershop_name }}</option>
