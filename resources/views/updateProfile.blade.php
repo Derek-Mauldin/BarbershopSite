@@ -26,7 +26,11 @@
                 <select class="form-control" id="barbershop_name" name="barbershop_name" style="width: 40%">
                     <option value="">Choose the shop you work at</option>
                     @foreach($barberShops as $shop)
-                        <option value="{{ $shop->barbershop_name }}">{{ $shop->barbershop_name }}</option>
+                        @if($shop->barbershop_name === Auth::user()->barbershop_name)
+                            <option value="{{ $shop->barbershop_name }}" selected>{{ $shop->barbershop_name }}</option>
+                        @else
+                            <option value="{{ $shop->barbershop_name }}">{{ $shop->barbershop_name }}</option>
+                        @endif
                     @endforeach
                 </select>
             </div>

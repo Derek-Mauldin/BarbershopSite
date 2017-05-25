@@ -23,9 +23,9 @@ Route::post('/checkIn', 'CheckInsController@checkIn');
 
 Route::post('/addShop', 'BarberShopsController@store');
 
-Route::get('/updateProfile', 'UserController@update');
+Route::get('/updateProfile', 'UserController@loadUpdate');
 
-Route::post('/update', "UserController@doUpdate");
+Route::post('/update', "UserController@update");
 
 Route::get('/passwordReset', 'Auth\ResetPasswordController@reset');
 

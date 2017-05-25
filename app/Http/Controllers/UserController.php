@@ -21,14 +21,14 @@ class UserController extends Controller
 		$this->middleware('auth');
 	}
 
-    public function update()
+    public function loadUpdate()
 		{
 			$barberShops = BarberShopsController::getAllBarbershops();
 
 			return view('updateProfile', compact('barberShops'));
 		}
 
-	public function doUpdate (Request $request)
+	public function update (Request $request)
 	{
 
 		$this->validate($request, [
