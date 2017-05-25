@@ -9,7 +9,7 @@
 
         @include('error')
 
-        <h2>Register Update Profile Here:</h2>
+        <h2>Update Profile Here:</h2>
 
         <form method="POST" action="/update">
 
