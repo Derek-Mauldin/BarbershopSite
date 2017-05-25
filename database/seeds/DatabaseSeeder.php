@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+			$this->call(barber_shopsTableSeeder::class);
+			$this->call(check_insTableSeeder::class);
+			$this->call(usersTableSeeder::class);
     }
 }
