@@ -32,6 +32,9 @@
 
             <h2>Please check in here:</h2>
 
+            @include('success')
+            @include('error')
+
             <form method="POST" action="/checkIn">
 
                 {{ csrf_field() }}
@@ -54,11 +57,6 @@
                 <button type="submit" class="btn btn-info">Check In</button>
 
             </form>
-
-            @include('success')
-            @include('error')
-
-
 
 
         </div>
