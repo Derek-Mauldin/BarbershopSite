@@ -6,7 +6,7 @@
     </nav>
 </div>
 
-@include('./header')
+@include('partials.header')
 
 @section('content')
 
@@ -33,7 +33,7 @@
 
         </form>
 
-       @include('error')
+       @include('partials.error')
 
     </div>
 

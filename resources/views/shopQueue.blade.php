@@ -2,8 +2,8 @@
 
 @section('content')
 
-@include('nav')
-@include('header')
+@include('partials.nav')
+@include('partials.header')
 
 
 <div class="container text-center">
@@ -36,7 +36,7 @@
 
     </table>
 
-    @include('logout')
+    @include('partials.logout')
 
 </div>
 

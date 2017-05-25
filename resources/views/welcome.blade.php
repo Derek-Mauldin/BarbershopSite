@@ -32,8 +32,8 @@
 
             <h2>Please check in here:</h2>
 
-            @include('success')
-            @include('error')
+            @include('partials.success')
+            @include('partials.error')
 
             <form method="POST" action="/checkIn">
 

@@ -1,8 +1,8 @@
 @extends('adminMaster')
 
 
-@include('nav');
-@include('header')
+@include('partials.nav');
+@include('partials.header')
 
 @section('content')
 
@@ -11,7 +11,7 @@
 
         <h2>Please Log In Here:</h2>
 
-        @include('error')
+        @include('partials.error')
 
         <form method="POST" action="/passworepUdate">
 
@@ -35,6 +35,8 @@
             <button type="submit" class="btn btn-danger">Change Password</button>
 
         </form>
+
+        @include('partials.logout')
 
     </div>
 

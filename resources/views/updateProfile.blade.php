@@ -7,7 +7,7 @@
 
     <div class="container">
 
-        @include('error')
+        @include('partials.error')
 
         <h2>Update Profile Here:</h2>
 
@@ -45,7 +45,7 @@
 
         </form>
 
-        @include('./logout')
+        @include('partials.logout')
 
     </div>
 

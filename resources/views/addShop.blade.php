@@ -1,8 +1,8 @@
 @extends('adminMaster')
 
 
-@include('nav')
-@include('header')
+@include('partials.nav')
+@include('partials.header')
 
 @section('content')
 
@@ -11,7 +11,7 @@
 
         <h2>Add new Barbershop:</h2>
 
-        @include('error')
+        @include('partials.error')
 
 
         <form method="POST" action="/addShop">
@@ -30,6 +30,6 @@
 
     </div>
 
-    @include('logout')
+    @include('partials.logout')
 
 @endsection

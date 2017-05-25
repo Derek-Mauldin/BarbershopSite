@@ -2,16 +2,16 @@
 
 @section('content')
 
-    @include('./nav')
-    @include('./header')
+    @include('partials.nav')
+    @include('partials.header')
 
     <div class="container">
 
         <h2>Register A New Administrator Here:</h2>
 
-        @include('error')
+        @include('partials.error')
 
-        <form method="POST" action="/register">
+        <form method="POST" class="form-horizontal" action="/register">
 
             {{ csrf_field() }}
 
@@ -51,7 +51,7 @@
 
         </form>
 
-        @include('./logout')
+        @include('partials.logout')
 
     </div>
 

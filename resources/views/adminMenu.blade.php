@@ -2,9 +2,9 @@
 
 @section('content')
 
-    @include('nav')
-    @include('header')
-    @include('success')
+    @include('partials.nav')
+    @include('partials.header')
+    @include('partials.success')
 
     <div class="container text-center">
 
@@ -33,7 +33,7 @@
 
     </div>
 
-    @include('logout')
+    @include('partials.logout')
 
 
 @endsection
